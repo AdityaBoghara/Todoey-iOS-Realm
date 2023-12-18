@@ -30,9 +30,11 @@ class TodoListViewController: UITableViewController {
         let newItem4 = Item()
         newItem4.title = "Pringles"
         itemArray.append(newItem4)
-//        if let item = (defaults.array(forKey: "TodoListArray") as? [String]) {
-//            itemArray = item
-//        }
+        
+        
+        if let items = (defaults.array(forKey: "TodoListArray") as? [Item]) {
+            itemArray = items
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
