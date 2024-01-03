@@ -12,8 +12,6 @@ import CoreData
 class TodoListViewController: UITableViewController {
     
     var itemArray = [Item]()
-    
-    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 //    print(dataFilePath)
     
@@ -21,7 +19,10 @@ class TodoListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        loadItems()
+        
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        
+        loadItems()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,6 +48,9 @@ class TodoListViewController: UITableViewController {
         
         
         itemArray[indexPath.row].done = !itemArray[indexPath.row].done
+        
+//        context.delete(itemArray[indexPath.row])
+//        itemArray.remove(at: indexPath.row)
         saveItems()
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -103,23 +107,20 @@ class TodoListViewController: UITableViewController {
     
     
     
-//    func loadItems(){
-//        
-//        if let data = try? Data(contentsOf: dataFilePath!){
-//            
-//            let decoder = PropertyListDecoder()
-//            do {
-//                itemArray = try decoder.decode([Item].self, from: data)
-//            }
-//            catch{
-//                print("Error decoding item, \(error)")
-//            }
-//            
-//            
-//        }
-//        
-//        
-//    }
+    func loadItems(){
+        
+        let request : NSFetchRequest<Item> = Item.fetchRequest()
+
+        do {
+           itemArray = try context.fetch(request)
+        }catch {
+            print("Error Fetching data from context! \(error)")
+        }
+        
+            
+        
+        
+    }
 
 }
 
