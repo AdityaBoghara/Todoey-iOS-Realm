@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		165169B72B44F4C900A5895B /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165169B62B44F4C900A5895B /* CategoryViewController.swift */; };
 		1658713E2B3F84C500C8B501 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1658713C2B3F84C500C8B501 /* DataModel.xcdatamodeld */; };
 		EB2BE4FA239524DB00FB933B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2BE4F9239524DB00FB933B /* AppDelegate.swift */; };
 		EB2BE4FE239524DB00FB933B /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2BE4FD239524DB00FB933B /* TodoListViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		165169B62B44F4C900A5895B /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		1658713D2B3F84C500C8B501 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		EB2BE4F6239524DB00FB933B /* Todoey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todoey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2BE4F9239524DB00FB933B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				EB2BE4FD239524DB00FB933B /* TodoListViewController.swift */,
+				165169B62B44F4C900A5895B /* CategoryViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				165169B72B44F4C900A5895B /* CategoryViewController.swift in Sources */,
 				EB2BE4FE239524DB00FB933B /* TodoListViewController.swift in Sources */,
 				1658713E2B3F84C500C8B501 /* DataModel.xcdatamodeld in Sources */,
 				EB2BE4FA239524DB00FB933B /* AppDelegate.swift in Sources */,
@@ -380,6 +384,7 @@
 			currentVersion = 1658713D2B3F84C500C8B501 /* DataModel.xcdatamodel */;
 			path = DataModel.xcdatamodeld;
 			sourceTree = "<group>";
+			usesTabs = 0;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
