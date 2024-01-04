@@ -14,13 +14,39 @@ import RealmSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    //MARK:- Using realm for data persistance
+    /*
+     App Delegate:
+        Adding the realm to the project.
+     
+     
+     Category Class:
+        it is a realm object. By subclassing this object class we are able to save our data using realm
+        What properties they should have
+        dyanmic keyword to monitor the change of the variable during project
+        List is the reation ship
+     
+     
+     Item Class:
+        Linkable objects is the inverse relationship (connectiong via type and property name)
+     
+        
+     
+     
+    
+     
+     
+     
+     */
+
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         do{
-            let realm = try Realm()
+            let _ = try Realm()
         }catch {
             print("error installing new real, \(error)")
             
